@@ -1,27 +1,213 @@
+commit 1: Agregue archivo index.html con html base.
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Clima en Santo Domingo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
 </head>
 <body>
 
-    <h1>Clima en Santo Domingo</h1>
-
-    <h2 id="clima">Clima soleado</h2>
-
-    <img id="icono" src="" alt="Icono del clima">
-
-    <h3>30°C</h3>
-
-    <button id="refrescar">Refrescar</button>
-
-    <!--
-        Ajuste final de frontend basado en commits frontend.txt
-        Autor: Julio Miniel
-        Rama: proyecto-fin-pag29/frontend
-    -->
+    
 
 </body>
 </html>
-``
+
+
+commit 2: agregue contenido de la pagina a index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clima en Santo Domingo</title>
+</head>
+<body>
+    <h1>Clima en Santo Domingo</h1>
+
+    <img src="./imgs/sunny.png" alt="Clima actual">
+
+    <h2></h2>
+    <button id="cargarTmp">Refrescar</button>
+
+</body>
+</html>
+
+commit 3: Agregue estilos de la pagina a index.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clima en Santo Domingo</title>
+
+    
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background-color: #ffffff; /* fondo totalmente blanco */
+            padding: 40px;
+        }
+
+        .weather-card {
+            width: 300px;
+            margin: 0 auto; /* centra la tarjeta */
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        img {
+            width: 120px;
+            display: block;
+            margin: 20px auto; /* centra la imagen y la separa */
+        }
+
+        h2 {
+            font-size: 48px;
+            font-weight: bold;
+        }
+
+        h2::after {
+            content: "°C";
+            font-size: 24px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #ffffff;
+            background-color: #2563eb; /* azul */
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+        }
+
+        button:hover {
+            background-color: #1e40af;
+        }
+
+        button:active {
+            transform: scale(0.97);
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="weather-card">
+        <h1>Clima en Santo Domingo</h1>
+
+        <img src="./imgs/sunny.png" alt="Clima soleado">
+
+        <h2>30</h2>
+    </div>
+
+
+</body>
+</html>
+
+commit 4: agregue ids a img, h2 y button.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clima en Santo Domingo</title>
+
+    
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background-color: #ffffff; /* fondo totalmente blanco */
+            padding: 40px;
+        }
+
+        .weather-card {
+            width: 300px;
+            margin: 0 auto; /* centra la tarjeta */
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        img {
+            width: 120px;
+            display: block;
+            margin: 20px auto; /* centra la imagen y la separa */
+        }
+
+        h2 {
+            font-size: 48px;
+            font-weight: bold;
+        }
+
+        h2::after {
+            content: "°C";
+            font-size: 24px;
+        }
+        
+        button {
+            margin-top: 20px;
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #ffffff;
+            background-color: #2563eb; /* azul */
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+        }
+
+        button:hover {
+            background-color: #1e40af;
+        }
+
+        button:active {
+            transform: scale(0.97);
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <div class="weather-card">
+        <h1>Clima en Santo Domingo</h1>
+
+        <img id="icono"  src="./imgs/sunny.png" alt="Clima soleado">
+
+        <h2 id="temp">30</h2>
+        <button id="cargarTmp">Refrescar</button>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
+
