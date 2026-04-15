@@ -1,5 +1,4 @@
-//commit 3: agregue event listener a boton & cree funcion cargarClima con funcionalidad basica
-
+//commit 4: Integre funcionamiento de la api a funcion cargarClima
 const boton = document.getElementById("cargarTmp");
 
 boton.addEventListener("click", () => {
@@ -7,7 +6,12 @@ boton.addEventListener("click", () => {
 })
 
 async function cargarClima() {
-    const temperatura = 30;
+    const url = "https://api.open-meteo.com/v1/forecast?latitude=18.4719&longitude=-69.8923&current=temperature_2m";
+
+    const response = await fetch(url);
+    const data = await response.json();
+
+    const temperatura = Math.round(data.current.temperature_2m);
 
     document.getElementById("temp").textContent = temperatura;
 
@@ -19,3 +23,4 @@ async function cargarClima() {
         icono.src = "./imgs/cold.png";
     }
 }
+
