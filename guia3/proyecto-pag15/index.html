@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Proyecto Unidad 1 Página 15</title>
+		<link
+			rel="stylesheet"
+			href="assets/styles.css"
+		/>
+	</head>
+	<body>
+		<main class="app">
+			<header class="app-header">
+				<div class="app-title">
+					<h1>Gestor de presupuesto</h1>
+					<p class="app-subtitle">
+						Registra tus ingresos y gastos para mantener el control.
+					</p>
+				</div>
+			</header>
+			<section class="budget-manager">
+				<form
+					id="transaction-form"
+					class="card form-card"
+					autocomplete="off"
+				>
+					<div class="field">
+						<label
+							for="amount"
+							class="field-label"
+							>Monto</label
+						>
+						<input
+							placeholder="Ej: 1500.50"
+							step="0.01"
+							min="0"
+							type="number"
+							id="amount"
+							class="field-input"
+							inputmode="decimal"
+							required
+						/>
+					</div>
+					<div class="field">
+						<label
+							for="type"
+							class="field-label"
+							>Tipo</label
+						>
+						<select
+							class="field-input"
+							id="type"
+							required
+						>
+							<option
+								value=""
+								selected
+								disabled
+							>
+								Selecciona tipo
+							</option>
+							<option value="Ingreso">Ingreso</option>
+							<option value="Gasto">Gasto</option>
+						</select>
+					</div>
+					<div class="field">
+						<label
+							for="description"
+							class="field-label"
+							>Descripcion</label
+						>
+						<input
+							type="text"
+							id="description"
+							class="field-input"
+							placeholder="Ej: Compra del super"
+							required
+						/>
+					</div>
+					<p
+						id="form-error"
+						class="form-error"
+						role="alert"
+						aria-live="polite"
+					></p>
+					<button
+						type="submit"
+						class="btn btn-primary"
+					>
+						Guardar
+					</button>
+				</form>
+				<section class="account-overview">
+					<div class="card summary-card">
+						<h2>Resumen</h2>
+						<div class="summary-grid">
+							<div class="summary-item summary-item--income">
+								<span class="summary-label">Ingresos</span>
+								<span
+									id="income"
+									class="summary-value"
+									>$0.00</span
+								>
+							</div>
+							<div class="summary-item summary-item--expense">
+								<span class="summary-label">Gastos</span>
+								<span
+									id="expense"
+									class="summary-value"
+									>$0.00</span
+								>
+							</div>
+							<div class="summary-item summary-item--balance">
+								<span class="summary-label">Saldo</span>
+								<span
+									id="balance"
+									class="summary-value balance-value"
+									>$0.00</span
+								>
+							</div>
+						</div>
+					</div>
+					<div class="card list-card">
+						<div class="list-header">
+							<h2>Transacciones</h2>
+							<p class="list-hint">
+								Tu historial aparece aqui y se guarda automaticamente.
+							</p>
+						</div>
+						<ul
+							id="transaction-list"
+							class="transaction-list"
+						></ul>
+					</div>
+				</section>
+			</section>
+		</main>
+
+		<script src="js/app.js"></script>
+	</body>
+</html>
